@@ -23,9 +23,7 @@ namespace GradingSystem
             students.Remove(student);
         }
         public double CalculateAverageGrade() 
-        {  
-            IList<double> courseGrades = new List<double>();
-
+        {   
             double sum = 0;
             foreach (var student in students)
             { 
