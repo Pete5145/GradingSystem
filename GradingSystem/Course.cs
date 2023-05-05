@@ -26,22 +26,16 @@ namespace GradingSystem
         {  
             IList<double> courseGrades = new List<double>();
 
+            double sum = 0;
             foreach (var student in students)
             { 
                 for (int i = 0; i < student.Grades.Count; i++)
                 {
-                    courseGrades.Add(student.Grades[i]);
+                    sum += student.Grades[i];
                 } 
             }
 
-            double sum = 0;
-            
-            for (int i = 0; i < courseGrades.Count; i++)
-            {
-                sum += courseGrades[i];
-            }
-
-            double average = sum/ courseGrades.Count;
+            double average = sum / students.Count;
             return average;
         }
     }

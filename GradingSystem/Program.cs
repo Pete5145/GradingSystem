@@ -24,6 +24,6 @@
 
            var average = course.CalculateAverageGrade();
             Console.WriteLine(average);
-        }  
+        } 
     }
 }
